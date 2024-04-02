@@ -7,8 +7,10 @@
 
 function slugify(title) {
     const newTitle = title.toLowerCase();
-    const addMinus = newTitle.replace(/\s/g, "-");
-    return addMinus;
+    const addMinus = newTitle.split(" ");
+    // console.log("🚀 ~ slugify ~ addMinus:", addMinus)
+    
+    return addMinus.join("-");
 }
     
 

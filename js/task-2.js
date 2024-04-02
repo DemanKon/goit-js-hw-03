@@ -11,22 +11,24 @@ function makeArray(firstArray, secondArray, maxLength) {
     //console.log("🚀 ~ makeArray ~ maxLength:", maxLength)
     
     const newArray = firstArray.concat(secondArray);
+    
     //console.log("🚀 ~ makeArray ~ newArray:", newArray)
     
-if (newArray.length > maxLength) {
-    const sliceArray = newArray.slice(0, maxLength);
-    //console.log("🚀 ~ makeArray ~ sliceArray:", sliceArray)
+    if (newArray.length > maxLength) {
+        const sliceArray = newArray.slice(0, maxLength);
+        // console.log("🚀 ~ makeArray ~ sliceArray:", sliceArray)
+        return sliceArray;
+    } else {
+        // console.log("🚀 ~ makeArray ~ newArray:", newArray)
+        return newArray;
+    }
     
 }
-        
 
 
-}
-
-
-makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3); // ["Mango", "Poly", "Ajax"]
-makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4); // ["Mango", "Poly", "Houston", "Ajax"]
-makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3); // ["Mango", "Ajax", "Chelsea"]
-makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2); // ["Earth", "Jupiter"]
-makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4); // ["Earth", "Jupiter", "Neptune", "Uranus"]
-makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0); // []
+console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
+console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
+console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
